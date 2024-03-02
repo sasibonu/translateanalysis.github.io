@@ -100,29 +100,100 @@
                     </div> <!-- /.section-header -->
                 </div> <!-- /.row -->
                 <div class="project-detail row">
-                    <div class="project-slider col-md-12">
-                        <img src="images/projects/big_project_1.jpg" alt="Slide 1">
-                        <img src="images/projects/big_project_2.jpg" alt="Slide 2">
-                        <img src="images/projects/big_project_3.jpg" alt="Slide 1">
-                        <a href="#" class="slidesjs-previous slidesjs-navigation">&lt;</a> 
-                        <a href="#" class="slidesjs-next slidesjs-navigation">&gt;</a>
-                    </div> <!-- /.project-slider -->
                     <div class="project-infos col-md-12">
                         <div class="box-content">
                             <h2 class="project-title">Clustering</h2>
                             <p>As a sort of unsupervised machine learning method, clustering entails assembling related items according to shared traits or properties.
-                            Comparable objects are grouped into distinct classes or categories in this way. Clustering algorithms do not require labeled data to be categorized.
-                            Numeric data without labels is needed for clustering. Given that the project uses textual data, the text data will be converted into a high-dimensional numerical format utilizing word2vec and PCA. This was done in an effort to decrease the dimensionality of the data while maintaining the greatest amount of variance.
+                            Comparable objects are grouped into distinct classes or categories in this way. Clustering algorithms do not require labeled data to be categorized.</p>
+
+                            <p>Since clustering uses distance metrics to see how close data points are, let's look into distance metrics. 4 types of distances can be used to determine clusters, Euclidean, Manhattan, and Cosine.</p>
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/euclidean.png" alt="Slide 1">
+                                <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                <img src="images/projects/big_project_3.jpg" alt="Slide 1">
+                            </div> <!-- /.project-slider -->
+                            <p> </p>
+
+                            <h3>Euclidean</h3>
+                            <p> The distance between two data points is determined by taking the square root of the sum of the squared differences between each data point's feature values. This is the most widely used distance metric in clustering. When the characteristics have comparable units of measurement and the data is continuous, it is frequently utilized.</p>
+
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/manhattan.png" alt="Slide 1">
+                                <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                <img src="images/projects/big_project_3.jpg" alt="Slide 1">
+                            </div> <!-- /.project-slider -->
+
+                            <h3>Manhattan</h3>
+                            <p> The total of the absolute differences between the two data points' respective feature values is used to compute the distance between them using this distance metric. When characteristics have different units of measurement or the data is categorical, it is frequently employed. Since the distance between two points is determined only by the variations in their coordinates, it is less susceptible to outliers than the Euclidean distance metric.</p>
+
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/cosine.png" alt="Slide 1">
+                                <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                <img src="images/projects/big_project_3.jpg" alt="Slide 1">
+                            </div> <!-- /.project-slider -->
+
+                            <h3>Cosine</h3>
+                            <p> Using the cosine of the angle formed between two data points in high-dimensional space, this distance metric determines their separation. It's frequently applied to data with a lot of features where the size of the feature values doesn't matter, such text or image data. This project uses cosine similarity as a result.</p>
+
+
+                            <p>Numeric data without labels is needed for clustering. Given that the project uses textual data, the text data will be converted into a high-dimensional numerical format utilizing word2vec and PCA. This was done in an effort to decrease the dimensionality of the data while maintaining the greatest amount of variance.
 
                                 In order to capture the semantic linkages between words, Word2Vec was utilized to produce dense vector representations for words based on their context. A common method in natural language processing (NLP) is called "word2vec," which creates distributed word representations in a continuous vector space.
                                 
-                                The word vectors created were later used to apply <a href="pca.html">PCA</a> on.
+                                The word vectors created were later used to apply <a href="pca.html">PCA</a> on. </p>
+
+                                <p>After applying PCA on the data, initially two clusters were used to categorize the data.</p>
+
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/cluster_2.png" alt="Slide 1">
+                                    <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                    <img src="images/projects/big_project_3.jpg" alt="Slide 1">
+                                </div> <!-- /.project-slider -->
+
+                                <p>The data looks fairly categorized. To essentially get an idea of how many clusters to begin with, or how many clusters would be a good fit. A method known as elbow method is used.
+                                    The elbow technique is used to figure out how many clusters in a dataset are best for k-means clustering. Plotting the within-cluster sum of squares (WCSS) against the total number of clusters is the first step in the process. The "elbow" point on the plot is the point at which the WCSS decreases at a much slower rate. This number represents the ideal number of clusters.
                                 </p>
 
-                            <p>Since clustering uses distance metrics to see how close data points are, let's look into distance metrics. 4 types of distances can be used to determine clusters, Euclidean, Manhattan, Cosine, and Minkowski.</p>
-                            
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/elbow.png" alt="Slide 1">
+                                    <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                    <img src="images/projects/big_project_3.jpg" alt="Slide 1">
+                                </div> <!-- /.project-slider -->
+
+                                <p>Elbow method suggests that 3 or 4 should be a good value of k to begin with, as the curve starts to flatten out after 4. This signifies that there's no real change after you increase the number of clusters from 4.
+                                    Hence, let's plot an image to see how well 4 clusters categorize the data.
+                                </p>
+
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/cluster_4.png" alt="Slide 1">
+                                    <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                    <img src="images/projects/big_project_3.jpg" alt="Slide 1">
+                                </div> <!-- /.project-slider -->
+
+                                <p> Another method that can be used to see which number of clusters can give a good fit is silhouette method.
+                                    It's an additional guideline for figuring out how many clusters, on average, a dataset should have in order to apply clustering algorithms like k-means. It gauges an object's cohesion—how similar it is to its own cluster—as opposed to separation—how similar it is to other clusters.
+                                    A high silhouette score means that the object is well matched to its own cluster and poorly matched to nearby clusters. The silhouette score goes from -1 to 1.
+                                </p>
+
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/silhouette.png" alt="Slide 1">
+                                    <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                    <img src="images/projects/big_project_3.jpg" alt="Slide 1">
+                                </div> <!-- /.project-slider -->
+
+
+                                <p>It can be seen from the above plot that 3 clusters has the highest score. Now, let's use k=3 to run k-means clustering.</p>
+
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/cluster_3.png" alt="Slide 1">
+                                    <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                    <img src="images/projects/big_project_3.jpg" alt="Slide 1">
+                                </div> <!-- /.project-slider -->
+
+                                <p> It is a pretty good fit as the borders are pretty clear and it's visible how well the data is separated.</p>
+    
                             <span class="project-subtitle">Another Subtilte In Here</span>
-                            <p>Content</p>
+                            <p><a href="https://github.com/sasibonu/sasibonu.github.io/blob/431923ed7ee6a0eed344c193b67621c2f3f65a7f/SasiBonuA02.ipynb">Code Link</a></p>
                             <ul class="project-meta">
                                 <li><i class="fa fa-calendar-o"></i>09 February 2024</li>
                             </ul>
