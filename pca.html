@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>Clustering</title>
+        <title>Prinicipal Component Analysis</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -39,8 +39,8 @@
                 </div> <!-- /.logo -->
                 <div class="social-top col-md-6 col-sm-6">
                     <ul>
-                        <li><a href="https://github.com/sasibonu" class="fa fa-github"></a></li>
-                        <li><a href="https://www.linkedin.com/in/sasi-bonu-98878116a/" class="fa fa-linkedin"></a></li>
+                        <li><a href="#" class="fa fa-github"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
                     </ul>
                 </div> <!-- /.social-top -->
             </div> <!-- /.top-header -->
@@ -69,7 +69,12 @@
                                     <li><a href="projects-3.html">Three Columns</a></li>
                                 </ul>
                             </li>
-                            <li><a href="conclusion.html">Conclusion</a></li>
+                            <li><a href="#">Conclusion</a>
+                                <ul>
+                                    <li><a href="blog.html">Blog Masonry</a></li>
+                                    <li><a href="blog-single.html">Post Single</a></li>
+                                </ul>
+                            </li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div> <!-- /.menu-wrapper -->
@@ -85,7 +90,12 @@
                             <li><a href="projects-3.html">Three Columns</a></li>
                         </ul>
                     </li>
-                    <li><a href="conclusion.html">Conclusion</a></li>
+                    <li><a href="#">Conclusion</a>
+                        <ul>
+                            <li><a href="blog.html">Blog Masonry</a></li>
+                            <li><a href="blog-single.html">Post Single</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -95,32 +105,50 @@
             <div class="inner-container container">
                 <div class="row">
                     <div class="section-header col-md-12">
-                        <h2>Clustering</h2>
+                        <h2>Prinicipal Component Analysis</h2>
                         <span> </span>
                     </div> <!-- /.section-header -->
                 </div> <!-- /.row -->
                 <div class="project-detail row">
-                    <div class="project-slider col-md-12">
-                        <img src="images/projects/big_project_1.jpg" alt="Slide 1">
-                        <img src="images/projects/big_project_2.jpg" alt="Slide 2">
-                        <img src="images/projects/big_project_3.jpg" alt="Slide 1">
-                        <a href="#" class="slidesjs-previous slidesjs-navigation">&lt;</a> 
-                        <a href="#" class="slidesjs-next slidesjs-navigation">&gt;</a>
-                    </div> <!-- /.project-slider -->
                     <div class="project-infos col-md-12">
                         <div class="box-content">
-                            <h2 class="project-title">Clustering</h2>
-                            <p>As a sort of unsupervised machine learning method, clustering entails assembling related items according to shared traits or properties.
-                            Comparable objects are grouped into distinct classes or categories in this way. Clustering algorithms do not require labeled data to be categorized.
-                            Numeric data without labels is needed for clustering. Given that the project uses textual data, the text data will be converted into a high-dimensional numerical format utilizing word2vec and PCA. This was done in an effort to decrease the dimensionality of the data while maintaining the greatest amount of variance.
+                            <h2 class="project-title">Prinicipal Component Analysis</h2>
 
-                                In order to capture the semantic linkages between words, Word2Vec was utilized to produce dense vector representations for words based on their context. A common method in natural language processing (NLP) is called "word2vec," which creates distributed word representations in a continuous vector space.
-                                
-                                The word vectors created were later used to apply <a href="pca.html">PCA</a> on.
-                                </p>
+                            <p> Analysis and modeling can be made more difficult by the redundant or unnecessary features that are frequently present in high-dimensional data. By identifying the key structures and patterns in the data, dimensionality reduction aids in helping the user concentrate on the most important information. The analysis that follows is easier to handle and understand as a result of this reduction.
+                                Algorithms' computational complexity drops as dimensionality is reduced, which results in quicker execution times and more effective resource usage.
+                                Moreover, because of our limited senses, it is difficult or impossible for humans to directly visualize high-dimensional data. Data can be transformed into lower-dimensional environments by dimensionality reduction techniques, making them more effectively viewed. Comprehending intricate linkages and patterns becomes easier when data is projected into two or three dimensions.</p>
+                                <p>Principal Component Analysis (PCA) is a popular method for dimensionality reduction and data compression in machine learning and data analysis. It functions by converting the initial high-dimensional data into a lower-dimensional space while keeping the majority of the data's variability. It is a way of simplifying data without losing it.</p>
+                            <p>To begin with, the covariance matrix is computed, which is a matrix that includes estimates of the relationships between each variable in Z and all other variables in Z. It is quite effective to know how one variable is related to another. 
+                            Two variables can have positive, negative, or absolutely no covariance between them.</p>
 
-                            <p>Since clustering uses distance metrics to see how close data points are, let's look into distance metrics. 4 types of distances can be used to determine clusters, Euclidean, Manhattan, Cosine, and Minkowski.</p>
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/covariance.png" alt="Slide 1">
+                                <img src="images/projects/pca.png" alt="Slide 2">
+                            </div> <!-- /.project-slider -->
+
+                                <p>Eigenvectors and Eigenvalues are the fundamental concepts of principal component analysis. What are eigen vectors and eigen values? </p>
+                            <p>Eigenvectors are unique vectors whose magnitude changes but they continue to point in the same direction following transformation. While eigenvalues are only the constants that, when changed linearly, raise or reduce the eigenvectors along their span.
+                                The eigenvalues are sorted in descending order by PCA. The primary components are the eigenvectors that match the biggest eigenvalues. The directions of the data's largest variance are specified by these eigenvectors. In the end, PCA converts the original data into a new, lower-dimensional space by projecting it onto the primary components that were chosen.</p>
+                            <p> High dimensions bring with them a lot of complications. High-dimensional data raises the danger of overfitting in machine learning models, which occurs when algorithms capture noise or unimportant patterns in the data instead of the underlying structure, along with lengthening computation times and decreasing intuition in visualizations. By emphasizing the most useful features and lowering the possibility of modeling noise, dimensionality reduction helps to mitigate overfitting.</p>
+                            <p> Models and outcomes that are easier to understand are frequently produced by dimensionality reduction, which simplifies the data. 
+                            The links between variables become more evident when the number of features is decreased, making it easier to evaluate the results of analyses and make predictions about the model.</p>
                             
+
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/data.png" alt="Slide 1">
+                                <img src="images/projects/pca.png" alt="Slide 2">
+                            </div> <!-- /.project-slider -->
+
+                            <p>PCA usually only requires numeric data. Although here textual data has been used, the data was transformed into high-dimensional numerical format using word2vec.
+                                This data was applied PCA on, which reduced the dimensionality and produced 2 principal components which was used in clustering.
+                            </p>
+
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/pca.png" alt="Slide 1">
+                                <img src="images/projects/pca.png" alt="Slide 2">
+                            </div> <!-- /.project-slider -->
+
+        
                             <span class="project-subtitle">Another Subtilte In Here</span>
                             <p>Content</p>
                             <ul class="project-meta">
