@@ -191,7 +191,19 @@
                                 </div> <!-- /.project-slider -->
 
                                 <p> It is a pretty good fit as the borders are pretty clear and it's visible how well the data is separated.</p>
-    
+                                <p> Another method of clustering is hierarchical clustering. It is a K-Means Clustering substitute with advantages and disadvantages of its own. 
+                                    It is used to put observations into the same group, just like k-means. Usually, it will determine how many clusters there are (from top to bottom or bottom to top). 
+                                    It does not, however, call for a predetermined number of clusters, in contrast to k-means. However, we can choose the distance metric to apply. </p>
+
+                                <p>There are different types of hierarchical clustering.</p>
+                                <p><strong> Clustering (AGNES)</strong>: Bottom up approach. Each observation starts as it's own cluster and merges with other observations. Other observations that are most similar. It will continue to do this until all the observations are in this one huge group.</p>
+                                <p><strong>Divisive Hierarchical Clustering</strong>: Top down approach. All observations are in one group, then they start to split the more different (heterogeneous) they are. This keeps on interating through until each observation is it's own cluster.</p>
+                            
+                            <p>Similarly, there are different forms of linking to explain how to read the dendograms.</p>
+                            <p><strong>Complete Linkage Clustering</strong>: Obtains the distance between ALL observations between cluster1 and cluster2 and merges the cluster together if the distances are minimum.</p>
+                            <p><strong>Average Linkage Clustering</strong>: This computers distances between ALL the observations in cluster1 and cluster2 and averages the values.</p>    
+                            <p><strong>Centroid Linkage Clustering</strong>: Calculates the centroid within each cluster and uses the distance between each centroid to determine what to merge.</p>
+                            
                             <span class="project-subtitle">Another Subtilte In Here</span>
                             <p><a href="https://github.com/sasibonu/sasibonu.github.io/blob/431923ed7ee6a0eed344c193b67621c2f3f65a7f/SasiBonuA02.ipynb">Code Link</a></p>
                             <ul class="project-meta">
