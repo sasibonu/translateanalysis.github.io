@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Clustering</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,500,500italic,700,900">
+        <!--
+        Artcore Template
+		http://www.templatemo.com/preview/templatemo_423_artcore
+        -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/templatemo-misc.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <section id="pageloader">
+            <div class="loader-item fa fa-spin colored-border"></div>
+        </section> <!-- /#pageloader -->
+
+        <header class="site-header container-fluid">
+            <div class="top-header">
+                <div class="logo col-md-6 col-sm-6">
+                    <h1><a href="index.html"><em>Sasi </em>Bonu</a></h1>
+                    <span> </span>
+                </div> <!-- /.logo -->
+                <div class="social-top col-md-6 col-sm-6">
+                    <ul>
+                        <li><a href="https://github.com/sasibonu" class="fa fa-github"></a></li>
+                        <li><a href="https://www.linkedin.com/in/sasi-bonu-98878116a/" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div> <!-- /.social-top -->
+            </div> <!-- /.top-header -->
+            <div class="main-header">
+                <div class="row">
+                    <div class="main-header-left col-md-3 col-sm-6 col-xs-8">
+                        <a id="search-icon" class="btn-left fa fa-search" href="#search-overlay"></a>
+                        <div id="search-overlay">
+                            <a href="#search-overlay" class="close-search"><i class="fa fa-times-circle"></i></a>
+                            <div class="search-form-holder">
+                                <h2>Type keywords and hit enter</h2>
+                                <form id="search-form" action="#">
+                                    <input type="search" name="s" placeholder="" autocomplete="off" />
+                                </form>
+                            </div>
+                        </div><!-- #search-overlay -->
+                    </div> <!-- /.main-header-left -->
+                    <div class="menu-wrapper col-md-9 col-sm-6 col-xs-4">
+                        <a href="#" class="toggle-menu visible-sm visible-xs"><i class="fa fa-bars"></i></a>
+                        <ul class="sf-menu hidden-xs hidden-sm">
+                            <li><a href="index.html">Introduction</a></li>
+                            <li><a href="eda.html">EDA</a></li>
+                            <li class="active"><a href="#">Projects</a>
+                                <ul>
+                                    <li><a href="projects-2.html">Two Columns</a></li>
+                                    <li><a href="projects-3.html">Three Columns</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="conclusion.html">Conclusion</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div> <!-- /.menu-wrapper -->
+                </div> <!-- /.row -->
+            </div> <!-- /.main-header -->
+            <div id="responsive-menu">
+                <ul>
+                    <li><a href="index.html">Introduction</a></li>
+                    <li><a href="eda.html">EDA</a></li>
+                    <li><a href="#">Projects</a>
+                        <ul>
+                            <li><a href="projects-2.html">Two Columns</a></li>
+                            <li><a href="projects-3.html">Three Columns</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="conclusion.html">Conclusion</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </header> <!-- /.site-header -->
+
+        <div class="content-wrapper">
+            <div class="inner-container container">
+                <div class="row">
+                    <div class="section-header col-md-12">
+                        <h2>Clustering</h2>
+                        <span> </span>
+                    </div> <!-- /.section-header -->
+                </div> <!-- /.row -->
+                <div class="project-detail row">
+                    <div class="project-infos col-md-12">
+                        <div class="box-content">
+                            <h2 class="project-title">Clustering</h2>
+                            <p>As a sort of unsupervised machine learning method, clustering entails assembling related items according to shared traits or properties.
+                            Comparable objects are grouped into distinct classes or categories in this way. Clustering algorithms do not require labeled data to be categorized.</p>
+
+                            <p>Since clustering uses distance metrics to see how close data points are, let's look into distance metrics. 4 types of distances can be used to determine clusters, Euclidean, Manhattan, and Cosine.</p>
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/euclidean.png" alt="Slide 1">
+                                <img src="images/projects/euclidean.png" alt="Slide 2">
+                                <img src="images/projects/euclidean.png" alt="Slide 1">
+                            </div> <!-- /.project-slider -->
+                            <p> </p>
+
+                            <h3>Euclidean</h3>
+                            <p> The distance between two data points is determined by taking the square root of the sum of the squared differences between each data point's feature values. This is the most widely used distance metric in clustering. When the characteristics have comparable units of measurement and the data is continuous, it is frequently utilized.</p>
+
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/manhattan.png" alt="Slide 1">
+                                <img src="images/projects/manhattan.png" alt="Slide 2">
+                                <img src="images/projects/manhattan.png" alt="Slide 1">
+                            </div> <!-- /.project-slider -->
+
+                            <h3>Manhattan</h3>
+                            <p> The total of the absolute differences between the two data points' respective feature values is used to compute the distance between them using this distance metric. When characteristics have different units of measurement or the data is categorical, it is frequently employed. Since the distance between two points is determined only by the variations in their coordinates, it is less susceptible to outliers than the Euclidean distance metric.</p>
+
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/cosine.png" alt="Slide 1">
+                                <img src="images/projects/cosine.png" alt="Slide 2">
+                                <img src="images/projects/cosine.png" alt="Slide 1">
+
+
+                            </div> <!-- /.project-slider -->
+
+                            <h3>Cosine</h3>
+                            <p> Using the cosine of the angle formed between two data points in high-dimensional space, this distance metric determines their separation. It's frequently applied to data with a lot of features where the size of the feature values doesn't matter, such text or image data. This project uses cosine similarity as a result.</p>
+
+
+                            <p>Numeric data without labels is needed for clustering. Given that the project uses textual data, the text data will be converted into a high-dimensional numerical format utilizing word2vec and PCA. This was done in an effort to decrease the dimensionality of the data while maintaining the greatest amount of variance.
+
+                                In order to capture the semantic linkages between words, Word2Vec was utilized to produce dense vector representations for words based on their context. A common method in natural language processing (NLP) is called "word2vec," which creates distributed word representations in a continuous vector space.
+                                
+                                The word vectors created were later used to apply <a href="pca.html">PCA</a> on. </p>
+
+                                <p>After applying PCA on the data, initially two clusters were used to categorize the data.</p>
+
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/cluster_2.png" alt="Slide 1">
+                                    <img src="images/projects/cluster_2.png" alt="Slide 2">
+                                    <img src="images/projects/cluster_2.png" alt="Slide 1">
+
+                                </div> <!-- /.project-slider -->
+
+                                <p>The data looks fairly categorized. To essentially get an idea of how many clusters to begin with, or how many clusters would be a good fit. A method known as elbow method is used.
+                                    The elbow technique is used to figure out how many clusters in a dataset are best for k-means clustering. Plotting the within-cluster sum of squares (WCSS) against the total number of clusters is the first step in the process. The "elbow" point on the plot is the point at which the WCSS decreases at a much slower rate. This number represents the ideal number of clusters.
+                                </p>
+
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/elbow.png" alt="Slide 1">
+                                    <img src="images/projects/elbow.png" alt="Slide 2">
+                                    <img src="images/projects/elbow.png" alt="Slide 1">
+
+                                </div> <!-- /.project-slider -->
+
+                                <p>Elbow method suggests that 3 or 4 should be a good value of k to begin with, as the curve starts to flatten out after 4. This signifies that there's no real change after you increase the number of clusters from 4.
+                                    Hence, let's plot an image to see how well 4 clusters categorize the data.
+                                </p>
+
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/cluster_4.png" alt="Slide 1">
+                                    <img src="images/projects/cluster_4.png" alt="Slide 2">
+                                    <img src="images/projects/cluster_4.png" alt="Slide 1">
+
+                                </div> <!-- /.project-slider -->
+
+                                <p> Another method that can be used to see which number of clusters can give a good fit is the silhouette method.
+                                    It's an additional guideline for figuring out how many clusters, on average, a dataset should have to apply clustering algorithms like k-means. It gauges an object's cohesion—how similar it is to its own cluster—as opposed to separation—how similar it is to other clusters.
+                                    A high silhouette score means that the object is well-matched to its own cluster and poorly matched to nearby clusters. The silhouette score goes from -1 to 1.
+                                </p>
+
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/silhouette.png" alt="Slide 1">
+                                    <img src="images/projects/silhouette.png" alt="Slide 2">
+                                    <img src="images/projects/silhouette.png" alt="Slide 1">
+
+                                </div> <!-- /.project-slider -->
+
+
+                                <p>It can be seen from the above plot that 3 clusters has the highest score. Now, let's use k=3 to run k-means clustering.</p>
+
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/cluster_3.png" alt="Slide 1">
+                                    <img src="images/projects/cluster_3.png" alt="Slide 2">
+                                    <img src="images/projects/cluster_3.png" alt="Slide 1">
+
+                                </div> <!-- /.project-slider -->
+
+                                <p> It is a pretty good fit as the borders are pretty clear and it's visible how well the data is separated.</p>
+                                <p> Another method of clustering is hierarchical clustering. It is a K-Means Clustering substitute with advantages and disadvantages of its own. 
+                                    It is used to put observations into the same group, just like k-means. Usually, it will determine how many clusters there are (from top to bottom or bottom to top). 
+                                    It does not, however, call for a predetermined number of clusters, in contrast to k-means. However, we can choose the distance metric to apply. </p>
+
+                                <p>There are different types of hierarchical clustering.</p>
+                                <p><strong> Clustering (AGNES)</strong>: Bottom up approach. Each observation starts as it's own cluster and merges with other observations. Other observations that are most similar. It will continue to do this until all the observations are in this one huge group.</p>
+                                <p><strong>Divisive Hierarchical Clustering</strong>: Top down approach. All observations are in one group, then they start to split the more different (heterogeneous) they are. This keeps on interating through until each observation is it's own cluster.</p>
+                            
+                            <p>Similarly, there are different forms of linking to explain how to read the dendograms.</p>
+                            <p><strong>Complete Linkage Clustering</strong>: Obtains the distance between ALL observations between cluster1 and cluster2 and merges the cluster together if the distances are minimum.</p>
+                            <p><strong>Average Linkage Clustering</strong>: This computers distances between ALL the observations in cluster1 and cluster2 and averages the values.</p>    
+                            <p><strong>Centroid Linkage Clustering</strong>: Calculates the centroid within each cluster and uses the distance between each centroid to determine what to merge.</p>
+                            
+                            <img src="images/projects/dendo.png" alt="Slide 2">
+
+                            <span class="project-subtitle">Another Subtilte In Here</span>
+                            <p><a href="https://github.com/sasibonu/sasibonu.github.io/blob/431923ed7ee6a0eed344c193b67621c2f3f65a7f/SasiBonuA02.ipynb">Code Link</a></p>
+                            <ul class="project-meta">
+                                <li><i class="fa fa-calendar-o"></i>09 February 2024</li>
+                            </ul>
+                        </div> <!-- /.box-content -->
+                    </div> <!-- /.project-infos -->
+                </div> <!-- /.project-detail -->
+            </div> <!-- /.inner-content -->
+        </div> <!-- /.content-wrapper -->
+
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Preloader -->
+        <script type="text/javascript">
+            //<![CDATA[
+            $(window).load(function() { // makes sure the whole site is loaded
+                $('.loader-item').fadeOut(); // will first fade out the loading animation
+                    $('#pageloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+                $('body').delay(350).css({'overflow-y':'visible'});
+            })
+            //]]>
+        </script>
+        
+    </body>
+</html>
