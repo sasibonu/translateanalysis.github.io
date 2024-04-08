@@ -101,21 +101,63 @@
                         <span> </span>
                     </div> <!-- /.section-header -->
                 </div> <!-- /.row -->
-                <div class="project-detail row">
-                    <div class="project-slider col-md-12">
-                        <img src="images/projects/big_project_1.jpg" alt="Slide 1">
-                        <img src="images/projects/big_project_2.jpg" alt="Slide 2">
-                        <img src="images/projects/big_project_3.jpg" alt="Slide 1">
-                        <a href="#" class="slidesjs-previous slidesjs-navigation">&lt;</a> 
-                        <a href="#" class="slidesjs-next slidesjs-navigation">&gt;</a>
-                    </div> <!-- /.project-slider -->
+
                     <div class="project-infos col-md-12">
                         <div class="box-content">
                             <h2 class="project-title">Naive Bayes</h2>
-                            <span class="project-subtitle">Another Subtilte In Here</span>
-                            <p>Content</p>
+                            <span class="project-subtitle">Supervised Learning</span>
+                            <p>The "naive" assumption of feature independence underlies the Naive Bayes algorithm, a straightforward probabilistic classifier based on Bayes' theorem. 
+                                Naive Bayes classifiers are surprisingly successful and frequently employed in a variety of machine learning applications, despite their simplicity.
+                                The underlying assumption of naive Bayes classifiers is that features are conditionally independent, which states that a feature's presence or absence, given a class label, is independent of the presence or absence of any other feature.
+                                A lot of text classification tasks, like spam detection, use naive Bayes classifiers. They work well in sparse and high-dimensional feature spaces, which makes text data processing possible.
+                                As a result, email filtering systems frequently use Naive Bayes classifiers to categorize incoming emails as spam or not based on their content and characteristics like word frequencies and patterns.
+                            </p>
+                            
+                            <div class="project-detail row">
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/bayes_theorem.png" alt="Slide 1">
+                                    <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                </div> <!-- /.project-slider -->
+                            </div>
+
+                            <p><strong> Multinomial Naive Bayes:</strong> For text classification tasks where features represent word counts or phrase frequencies, multinomial Naive Bayes is frequently utilized. 
+                                Given the class label, it estimates the likelihood of seeing each phrase in a document. Text classification activities like document classification and spam detection are good fits for it. 
+                                It excels in applications involving natural language processing, especially in high-dimensional and sparse feature spaces.
+                            </p>
+
+                            <p><strong>Bernoulli Naive Bayes:</strong> When dealing with binary feature data—features expressed as binary indicators of presence or absence—Bernoulli Naive Bayes is frequently utilized. 
+                                It makes the assumption that a Bernoulli distribution governs features. Given the class label, it represents the likelihood of detecting each feature as either 1 (present) or 0 (absence). 
+                                For binary classification tasks including spam detection, sentiment analysis, and document categorization, it is frequently applied.
+                            </p>
+
+                            <p> The data that we are gonna use is the text data that we originally had of english and hindi subtitles. 
+                                The data was divided into training and testing data, with 80% data going to the training portion and the rest 20% to test the results with.
+                            </p>
+
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/data.png" alt="Slide 1">
+                                <img src="images/projects/data.png" alt="Slide 2">
+                            </div> <!-- /.project-slider -->
+
+                            <p> The english subtitles were used as the data and the hindi subtitles were the target variables. After training with the data, the predictions are made on the test data.
+                                The generated confusion matrix shows that all the hindi subtitles are properly classified except one.
+                            </p>
+
+                            <div class="project-detail row">
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/nb_confusion_matrix.png" alt="Slide 1">
+                                    <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                </div> <!-- /.project-slider -->
+                            </div>
+                            
+                            <p>The first row in the confusion matrix corresponds to the "English" class, while the second row corresponds to the "Hindi" class. The rows in the confusion matrix represent the true labels. 
+                                The anticipated labels are shown in the columns. The zeros in the other cells show that there are no cases where anything was mistakenly labeled as "English" when it was actually "Hindi" (false negatives) or as "Hindi" when it was actually "English" (false positives). 
+                                The classifier seems to function well overall, obtaining a high accuracy score and a high number of true positives and true negatives.
+                            </p>
+
+                            <p><a href="">Code Link</a></p>
                             <ul class="project-meta">
-                                <li><i class="fa fa-calendar-o"></i>09 February 2024</li>
+                                <li><i class="fa fa-calendar-o"></i>07 April 2024</li>
                             </ul>
                         </div> <!-- /.box-content -->
                     </div> <!-- /.project-infos -->

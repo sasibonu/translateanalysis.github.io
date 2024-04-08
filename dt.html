@@ -111,21 +111,83 @@
                         <span> </span>
                     </div> <!-- /.section-header -->
                 </div> <!-- /.row -->
-                <div class="project-detail row">
-                    <div class="project-slider col-md-12">
-                        <img src="images/projects/big_project_1.jpg" alt="Slide 1">
-                        <img src="images/projects/big_project_2.jpg" alt="Slide 2">
-                        <img src="images/projects/big_project_3.jpg" alt="Slide 1">
-                        <a href="#" class="slidesjs-previous slidesjs-navigation">&lt;</a> 
-                        <a href="#" class="slidesjs-next slidesjs-navigation">&gt;</a>
-                    </div> <!-- /.project-slider -->
+                
                     <div class="project-infos col-md-12">
                         <div class="box-content">
                             <h2 class="project-title">Decision Tree</h2>
-                            <span class="project-subtitle">Another Subtilte In Here</span>
-                            <p>Content</p>
+                            <span class="project-subtitle">Supervised Learning</span>
+                            <p>A well-liked and adaptable machine learning technique for both classification and regression applications is the decision tree. They're simple to read and comprehend. Humans can perceive and comprehend the decision rules represented by the tree with ease.
+                                Decision Trees are made up of nodes and are hierarchical structures. Based on a feature (attribute) of the data, each node indicates a judgment. Beginning at the root node, the tree divides into branches (edges) according to the feature values. 
+                                The procedure keeps going until the ultimate choice or result is represented by a leaf node. By posing a number of queries regarding the characteristics of the data, they arrive at conclusions. 
+                                These inquiries are predicated on the characteristics that most effectively divide the data into several groups or classes. Maximizing the purity of the generated groups at each node is the aim.
+                            </p>
+                            <p>Decision Trees are used to predict continuous numerical values in regression tasks. The average (or weighted) of the target values of the training examples that land in the same leaf node serves as the forecast for a new data point.
+                                In contrast, Decision Trees are used in classification jobs to divide data into various classes or categories. A class label is associated with each leaf node. 
+                                A new data point passes through the tree by following the path that leads from the root to a leaf node; the label associated with the leaf node is the projected class label.
+                                Decision trees are frequently utilized as the fundamental components of ensemble techniques like Gradient Boosting Machines and Random Forests. Multiple Decision Trees are combined in these ensemble algorithms to enhance prediction performance and robustness.
+                            </p>
+
+                            <strong>How do I choose the correct condition to split the data?</strong>
+
+                            <p> There're many ways this can happen. Many ways to determine if the data being split is pure or impure.</p>
+                            <p>1. <strong>Gini Impurity:</strong> The risk of erroneously classifying an element selected at random and labeled based on the node's label distribution is measured by the Gini impurity. 
+                                A node with a Gini impurity of 0.5 represents a perfect split, where the classes are evenly distributed, whereas a node with a Gini impurity of 0 comprises instances of the same class.
+                            </p>
+                            <p>2. <strong>Entropy:</strong> The degree of chaos or impurity in a set of data is measured by entropy. The uncertainty or randomness of the labels at a node can be measured using entropy in the context of Decision Trees. 
+                                Label distributions that are more ordered or homogenous have lower entropies, whereas those that are more disordered or heterogeneous have higher entropies.
+                            </p>
+                            <div class="project-detail row">
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/entropy.png" alt="Slide 1">
+                                    <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                </div> <!-- /.project-slider -->
+                            </div>
+
+                            <p>3. <strong>Information Gain:</strong> The reduction in entropy or impurity obtained by dividing the data based on a specific attribute is measured by information gain. 
+                                It measures the amount of knowledge a feature offers regarding the class labels. When deciding which traits to split on, Decision Trees seek to maximize information gain because doing so produces more homogeneous child nodes.
+                            </p>
+
+                            <div class="project-detail row">
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/info_gain.png" alt="Slide 1">
+                                    <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                </div> <!-- /.project-slider -->
+                            </div>
+
+                            <p> The data that we are gonna use is the text data that we originally had of english and hindi subtitles. Since Python/Sklearn/, needs the data to only be numeric, we're gonna try and classify the data according to the movie year.
+                                The data was divided into training and testing data, with 80% data going to the training portion and the rest 20% to test the results with.
+                            </p>
+
+                            <p> The results of the data can be seen in the below picture. It shows that the gini index is 0, which tells us that our model did a pretty bad job.
+                                These results make sense since the data is mainly textual except the year the movie came out. 
+                                Trying to classify subtitles by the year a movie came out doesn't make sense and hence is not supposed to do a good job by any means.
+                            </p>
+
+                            <div class="project-detail row">
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/gini_output.png" alt="Slide 1">
+                                    <img src="images/projects/big_project_2.jpg" alt="Slide 2">
+                                </div> <!-- /.project-slider -->
+                            </div>
+
+                            <div class="project-detail row">
+                                <div class="project-slider col-md-12">
+                                    <img src="images/projects/gini_tree1.png" alt="Slide 1">
+                                    <img src="images/projects/gini_tree2.png" alt="Slide 2">
+                                    <img src="images/projects/gini_tree3.png" alt="Slide 1">
+                                    <a href="#" class="slidesjs-previous slidesjs-navigation">&lt;</a> 
+                                    <a href="#" class="slidesjs-next slidesjs-navigation">&gt;</a>
+                                </div> <!-- /.project-slider -->
+                            </div>
+
+
+                            <p> The same method has been repeated for at least three different trees to make a confusion matrix and have their gini indeces.
+                                All of them are indications that the model doesn't perform well on the data and should be discarded for this purpose.
+                            </p>
+                            
+                            <p><a href="">Code Link</a></p>
                             <ul class="project-meta">
-                                <li><i class="fa fa-calendar-o"></i>09 February 2024</li>
+                                <li><i class="fa fa-calendar-o"></i>05 April 2024</li>
                             </ul>
                         </div> <!-- /.box-content -->
                     </div> <!-- /.project-infos -->
