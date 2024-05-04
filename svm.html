@@ -102,20 +102,81 @@
                     </div> <!-- /.section-header -->
                 </div> <!-- /.row -->
                 <div class="project-detail row">
-                    <div class="project-slider col-md-12">
-                        <img src="images/projects/big_project_1.jpg" alt="Slide 1">
-                        <img src="images/projects/big_project_2.jpg" alt="Slide 2">
-                        <img src="images/projects/big_project_3.jpg" alt="Slide 1">
-                        <a href="#" class="slidesjs-previous slidesjs-navigation">&lt;</a> 
-                        <a href="#" class="slidesjs-next slidesjs-navigation">&gt;</a>
-                    </div> <!-- /.project-slider -->
+    
                     <div class="project-infos col-md-12">
                         <div class="box-content">
                             <h2 class="project-title">Support Vector Machine</h2>
                             <span class="project-subtitle">Another Subtilte In Here</span>
-                            <p>Content</p>
+                            <p>Support Vector Machines (SVMs) are supervised machine learning models primarily used for classification tasks, but can also be applied to regression tasks. Their method involves locating the best hyperplane in a high-dimensional space to divide data points into distinct classes.
+                                SVMs search the feature space for the hyperplane that best divides data points of various classes. This hyperplane is a line in two dimensions and a hyperplane in higher dimensions. By maximizing the margin between the classes—that is, the separation between the hyperplane and the closest data points, or support vectors—the decision boundary is selected.
+                                SVMs were first created for data that could be easily divided into classes by a straight line or hyperplane. However, when paired with a method known as the kernel trick, they can still be useful for non-linear data.
+                            </p>
+
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/svm.png" alt="Slide 1">
+                                <img src="images/projects/svm.png" alt="Slide 2">
+                            </div> <!-- /.project-slider -->
+            
+                            <strong>Kernels</strong>
+                            <p>
+                                SVMs can implicitly transfer input data into a higher-dimensional space where classes can be distinguished by a hyperplane thanks to the kernel trick. This is accomplished by constructing a kernel function that, without actually computing the transformation explicitly, computes the dot product of data points in the changed space.
+                            </p>
+                            <p>
+                                1. Linear Kernel: 𝐾(𝑥,𝑦)=𝑥𝑇𝑦K(x,y)=x^Ty
+                                This is the default kernel. It represents a linear relationship between data points in the original feature space.
+                            </p>
+                            <p>   
+                                2. Polynomial Kernel: 𝐾(𝑥,𝑦)=(𝑥𝑇𝑦+𝑐)𝑑K(x,y)=(xTy+c)d
+                                This kernel computes the polynomial expansion of the features, allowing SVMs to capture non-linear relationships between data points.
+                            </p>
+                            <p>   
+                                3. Radial Basis Function (RBF) Kernel: 𝐾(𝑥,𝑦)=exp(−𝛾∥𝑥−𝑦∥2)K(x,y)=exp(−γ∥x−y∥ 2)
+                                The RBF kernel maps data into infinite-dimensional space, enabling SVMs to model highly non-linear decision boundaries.
+                            </p>
+
+                            <p>
+                                Since the dot product defines the similarity or relationship between data points in the modified feature space, it is essential to the use of kernels in Support Vector Machines (SVMs). 
+                                The proximity or resemblance between two vectors is measured by the dot product. It measures the similarity between pairs of data points in the context of SVMs.
+                                The contribution of each data point to the decision boundary is determined by the dot product of its feature vectors. The hyperplane that optimizes the margin between classes is known as the decision boundary in support vector machines (SVMs). 
+                                By calculating each data point's distance from the decision boundary, the dot product aids SVMs in identifying the ideal hyperplane for classification. The kernel function can be computed efficiently by using the dot product. 
+                                The dot product allows SVMs to function in the original feature space while implicitly capturing the relationships between data points in the transformed space, as opposed to explicitly transforming the input data into a higher-dimensional space, which can be computationally expensive or even impossible for infinite-dimensional spaces.
+                                The SVM learning technique depends on the dot product of feature vectors, which is exploited by the kernel trick. SVMs can function efficiently in a high-dimensional space without directly computing the converted feature vectors by substituting a kernel function for this dot product. 
+                                SVMs can handle non-linear classification jobs because of this, which also increases their computing efficiency.
+                            </p>
+
+                            <p>
+                                <strong> Data Preparation </strong>
+                                Labeled data is necessary for SVMs. This implies that a label identifying the class or category of each data point is required. To evaluate how well the trained model generalizes to new data, data is divided into training and testing sets. 
+                                The model might work well with known data but not with new data if the testing set was used in the training process. There must be no data point overlap between the training and testing sets for the sets to be considered separate. This guarantees that the model is assessed using data that it was not exposed to during training, resulting in a more precise assessment of its efficacy.
+                                There are two disjoint sets created from the labeled data.
+                                Training Set: The SVM model's training or construction set. It makes up the bulk of the information.
+                                Testing Set: Applied to assess how well the trained model performs. It needs to be kept apart from the training set in order to provide an objective evaluation of the model's accuracy.
+                            </p>
+
+                            <div class="project-slider col-md-12">
+                                <img src="images/projects/data.png" alt="Slide 1">
+                                <img src="images/projects/data.png" alt="Slide 2">
+                            </div> <!-- /.project-slider -->
+                            
+                            <p>
+                                The data here includes movie subtitles with associated translations and metadata. The testing set would contain separate sentences and their translations for evaluating the trained SVM model. Sentences together with the metadata and translations they correspond to must be included in the training set. 
+                                For the purpose of assessing the trained SVM model, the testing set would comprise individual sentences and their translations. 
+                                SVMs are limited to processing numerical data. Because SVMs rely on numerical computations for their algorithmic operations, optimization strategies, and decision functions, they require labeled numeric data. Non-numeric data would not work with these procedures and would make it more difficult for the SVM to learn and categorize. 
+                                It is necessary to translate any non-numeric aspects of the data into numerical representations. This frequently entails using methods for categorical variables such as one-hot encoding.The scikit-learn CountVectorizer class is used to vectorize the text input. A text processing method called CountVectorizer takes a corpus of text documents and turns it into a matrix of token counts, with each row denoting a document and each column a unique word in the corpus.
+                            </p>
+
+                            <p>
+                                <strong> Results </strong>
+
+                                The data was tested with 3 kernels and 3 'c' values. The first kernel used was linear. This was used with 3 different 'c' values, 1,2, and 5.
+                                The models were ovefitting for all three 'c' values. Adjusting the 'c' values didn't bring any change to the model. Similarly the data was tested with rbf and polynomial kernel.
+
+
+                            </p>
+
+
                             <ul class="project-meta">
-                                <li><i class="fa fa-calendar-o"></i>09 February 2024</li>
+                                <li><i class="fa fa-calendar-o"></i>29 April 2024</li>
                             </ul>
                         </div> <!-- /.box-content -->
                     </div> <!-- /.project-infos -->
